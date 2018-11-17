@@ -5,3 +5,5 @@
 	Lowered chance for no perks on killers (13% down to 9%)
 	Lowered chance for no perks on survivors (15% down to 9%)
 	Enabled DM responses - All commands will be sent to author directly
+	Neater output
+	Lists are in a more readable order in the source

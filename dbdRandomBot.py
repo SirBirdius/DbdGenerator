@@ -31,10 +31,28 @@ async def setKill(ctx):
 	killChoices = ['Trapper','Wraith','Hillbilly','Nurse','Shape','Doctor','Huntress','Cannibal','Nightmare','Pig','Hag','Clown','Spirit']
 	killer = random.choice(killChoices)	
 	
-	offerChoices = ['Cut Coin','Scratched Coin','Moldy Oak','Rotten Oak','Nothing','Clear Reagent','Hazy Reagent','Murky Reagent','New Moon Bouquet','Crescent Moon Bouquet','Nothing','Full Moon Bouquet','Shroud of Separation','Cypress Memento Mori','Ivory Memento Mori','Nothing','Putrid Oak','Quarter Moon Bouquet','Ebony Memento Mori','Nothing','Nothing']
+	offerChoices = ['Clear Reagent (Brown)',
+		'Scratched Coin (Yellow)','Moldy Oak (Yellow)','Hazy Reagent (Yellow)','Shroud of Separation (Yellow)','Cypress Memento Mori (Yellow)',
+		'Ivory Memento Mori (Green)','Rotten Oak (Green)',
+		'Cut Coin (Purple)','Murky Reagent (Purple)','Putrid Oak (Purple)',
+		'Ebony Memento Mori (Red)',
+		'Nothing','Nothing']
 	offering = random.choice(offerChoices)
 	
-	perkChoices = ['A Nurse\'s Calling','Agitation','Barbecue and Chilli','Beast of Prey','Bitter Murmer','Bloodhound','Blood Warden','Brutal Strength','Deerstalker','Distressing','Dying Light','Enduring','Fire Up','Franklin\'s Demise','Insidious','Iron Grasp','Hangman\'s Trick','Hex: Devour Hope','Hex: Huntress Lullaby','Hex: No One Escapes Death','Hex: Ruin','Hex: The Third Seal','Hex: Thrill of the Hunt','Knock Out','Lightborn','Make Your Choice','Monitor and Abuse','Monstrous Shrine','Overcharge','Overwhelming Presence','Remember Me','Play With Your Food','Predator','Save The Best For Last','Shadowborn','Sloppy Butcher','Spies From The Shadows','Stridor','Surveillance','Territorial Imperative','Tinkerer','Thanatophobia','Unnerving Presence','Unrelenting','Whispers','Bamboozle','Coulrophobia','Pop Goes The Weasel','Spirit Fury','Hex: Haunted Ground','Rancor','Nothing','Nothing','Nothing','Nothing','Nothing']
+	perkChoices = ['Unnerving Presence (Green)','Brutal Strength (Purple)','Agitation (Purple)', #Trapper
+		'Predator (Green)','Bloodhound (Purple)','Shadowborn (Purple)', #Wraith
+		'Enduring (Green)','Lightborn (Purple)','Tinkerer (Purple)', #Hillbilly
+		'Stridor (Green)','Thanatophobia (Purple)','A Nurse\'s Calling (Purple)', #Nurse
+		'Beast of Prey (Green)','Territorial Imperative (Purple)','Hex: Huntress Lullaby (Purple)', #Huntress
+		'Save The Best For Last (Purple)','Play With Your Food (Purple)','Dying Light (Purple)', #Shape
+		'Hex: The Third Seal (Purple)','Hex: Ruin (Purple)','Hex: Devour Hope (Purple)', #Hag
+		'Knock Out (Green)','Barbecue & Chilli (Purple)','Franklin\'s Demise (Purple)', #Cannibal
+		'Overwhelming Presence (Green)','Monitor & Abuse (Purple)','Overcharge (Purple)', #Doctor
+		'Fire Up (Green)','Remember Me (Purple)','Blood Warden (Purple)', #Nightmare
+		'Hangman\'s Trick (Green)','Surveillance (Purple)','Make Your Choice (Purple)', #Pig
+		'Bamboozle (Green)','Coulrophobia (Purple)','Pop Goes The Weasel (Purple)', #Clown
+		'Spirit Fury (Green)','Hex: Haunted Ground (Purple)','Rancor (Purple)', #Spirit
+		'Bitter Murmer (Purple)','Deerstalker (Green)','Distressing (Green)','Insidious (Purple)','Iron Grasp (Green)','Hex: No One Escapes Death (Purple)','Hex: Thrill Of The Hunt (Green)','Monstrous Shrine (Green)','Sloppy Butcher (Green)','Spies From The Shadows (Green)','Unrelenting (Green)','Whispers (Purple)']
 
 	perk1 = random.choice(perkChoices)
 	
@@ -52,21 +70,34 @@ async def setKill(ctx):
 	
 
 	if(killer == 'Trapper'):
-		addonList = ['Trapper Gloves','Strong Coil Spring','Serrated Jaws','Wax Brick','Trapper Bag','Trap Setters','Secondary Coil','Logwood Dye','4-Coil Spring Kit','Tar Bottle','Setting Tools','Rusted Jaws','Oily Coil','Fastening Tools','Stitched Bag','Honing Stone','Bloody Coil','Diamond Stone','Nothing','Nothing','Nothing']
+		addonList = ['Trapper Sack (Brown)','Trapper Gloves (Brown)','Strong Coil Spring (Brown)','Padded Jaws (Brown)',
+			'Trapper Bag (Yellow)','Trap Setters (Yellow)','Serrated Jaws (Yellow)','Logwood Dye (Yellow)','4-Coil Spring Kit (Yellow)',
+			'Wax Brick (Green)','Tar Bottle (Green)','Setting Tools (Green)','Secondary Coil (Green)','Rusted Jaws (Green)',
+			'Stiched Bag (Purple)','Oily Coil (Purple)','Honing Stone (Purple)','Fastening Tools (Purple)','Iridescent Stone (Red)','Bloody Coil (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
 			addon2 = random.choice(addonList)
 
 	if(killer == 'Hag'):
-		addonList = ['Rope Necklet','Powdered Eggshell','Dead Fly Mud','Bog Water','Pussy Willow Catkins','Half Eggshell','Dragonfly Wings','Cypress Necklet','Bloodied Water','Willow Wreath','Swamp Orchid Necklet','Dried Cicada','Cracked Turtle Egg','Bloodied Mud','Scarred Hand','Rusty Shackles','Granma\'s Heart','Disfigured Ear','Waterlogged Shoe','Mint Rag','Nothing','Nothing','Nothing','Nothing']
+		addonList = ['Rope Necklet (Brown)','Powdered Eggshell (Brown)','Dead Fly Mud (Brown)','Bog Water (Brown)',
+			'Pussy Willow Catkins (Yellow)','Half Eggshell (Yellow)','Dragonfly Wings (Yellow)','Cypress Necklet (Yellow)','Bloodied Water (Yellow)',
+			'Willow Wreath (Green)','Swamp Orchid Necklet (Green)','Dried Cicada (Green)','Cracked Turtle Egg (Green)','Bloodied Mud (Green)',
+			'Scarred Hand (Purple)','Rusty Shackles (Purple)','Granma\'s Heart (Purple)','Disfigured Ear (Purple)',
+			'Waterlogged Shoe (Red)','Mint Rag (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
 			addon2 = random.choice(addonList)
 		
 	if(killer == 'Cannibal'):
-		addonList = ['Vegetable Oil','Spark Plug','Chainsaw File','Speed Limiter','Shop Lubricant','Primer Bulb','Long Guide Bar','Knife Scratches','Homemade Muffler','Grisly Chains','Depth Gauge Rake','Chilli','The Grease','The Beast\'s Marks','Rusted Chains','Light Chassis','Carburetor Tuning Guide','Begrimed Chains','Award-winning Chilli','Nothing','Nothing','Nothing']
+		addonList = ['Vegetable Oil (Brown)','Spark Plug (Brown)','Chainsaw File (Brown)',
+			'Speed Limiter (Yellow)','Shop Lubricant (Yellow)','Primer Bulb (Yellow)','Long Guide Bar (Yellow)','Knife Scratches (Yellow)','Homemade Muffler (Yellow)','Grisly Chains (Yellow)','Depth Gauge Rake (Yellow)','Chilli (Yellow)',
+			'The Grease (Green)','The Beast\'s Marks (Green)','Rusted Chains (Green)','Light Chassis (Green)','Carburettor Tuning Guide (Green)',
+			'Begrimed Chains (Purple)','Award-winning Chilli (Purple)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -74,7 +105,12 @@ async def setKill(ctx):
 		
 		
 	if(killer == 'Doctor'):
-		addonList = ['Moldy Electrode','Maple Knight','\"Order\" - Class I','\"Calm\" - Class I','Scrapped Tape','Polished Electrode','Interview Tape','\"Restraint\" - Class II','\"Order\" - Class II','\"Discipline\" - Class II','\"Calm\" - Class II','High Stimulus Electrode','\"Restraint\" - Class III','\"Discipline\" - Class III','\"Restraint\" - Carter\'s Notes','\"Order\" - Carter\'s Notes','\"Obedience\" - Carter\'s Notes','\"Discipline\" - Carter\'s Notes','\"Calm\" - Carter\'s Notes','Iridescent King','Nothing','Nothing','Nothing']
+		addonList = ['Moldy Electrode (Brown)','Maple Knight (Brown)','\"Order\" - Class I (Brown)','\"Calm\" - Class I (Brown)',
+			'Scrapped Tape (Yellow)','Polished Electrode (Yellow)','Interview Tape (Yellow)','\"Restraint\" - Class II (Yellow)','\"Order\" - Class II (Yellow)','\"Discipline\" - Class II (Yellow)','\"Calm\" - Class II (Yellow)',
+			'High Stimulus Electrode (Green)','\"Restraint\" - Class III (Green)','\"Discipline\" - Class III (Green)',
+			'\"Restraint\" - Carter\'s Notes (Purple)','\"Order\" - Carter\'s Notes (Purple)','\"Obedience\" - Carter\'s Notes (Purple)','\"Discipline\" - Carter\'s Notes (Purple)','\"Calm\" - Carter\'s Notes (Purple)',
+			'Iridescent King (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -82,7 +118,11 @@ async def setKill(ctx):
 		
 
 	if(killer == 'Hillbilly'):
-		addonList = ['Vegetable Oil','Spark Plug','Chainsaw File','Spiked Boots','Speed Limiter','Shop Lubricant','Primer Bulb','Long Guide Bar','Homemade Muffler','Grisly Chains','Depth Gauge Rake','Death Engravings','The Thompson\'s Mix','Rusted Chains','Light Chassis','Doom Engravings','Carburetor Tuning Guide','Thompson\'s Moonshine','Begrimed Chains','Nothing','Nothing','Nothing']
+		addonList = ['Vegetable Oil (Brown)','Spark Plug (Brown)','Chainsaw File (Brown)',
+			'Spiked Boots (Yellow)','Speed Limiter (Yellow)','Shop Lubricant (Yellow)','Primer Bulb (Yellow)','Long Guide Bar (Yellow)','Homemade Muffler (Yellow)','Grisly Chains (Yellow)','Depth Gauge Rake (Yellow)','Death Engravings (Yellow)',
+			'The Thompson\'s Mix (Green)','Rusted Chains (Green)','Light Chassis (Green)','Doom Engravings (Green)','Carburetor Tuning Guide (Green)',
+			'Thompson\'s Moonshine (Purple)','Begrimed Chains (Purple)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -90,7 +130,12 @@ async def setKill(ctx):
 		
 
 	if(killer == 'Nightmare'):
-		addonList = ['Wool Shirt','Sheep Block','Kid\'s Drawing','Garden Rake','Prototype Claws','Outdoor Rope','Nancy\'s Sketch','Green Dress','Cat Block','Unicorn Block','Swing Chains','Nancy\'s Masterpiece','Jump Rope','Blue Dress','Pill Bottle','Paint Thinner','Class Photo','\"Z\" Block','Red Paint Brush','Black Box','Nothing','Nothing','Nothing']
+		addonList = ['Wool Shirt (Brown)','Sheep Block (Brown)','Kid\'s Drawing (Brown)','Garden Rake (Brown)',
+			'Prototype Claws (Yellow)','Outdoor Rope (Yellow)','Nancy\'s Sketch (Yellow)','Green Dress (Yellow)','Cat Block (Yellow)',
+			'Unicorn Block (Green)','Swing Chains (Green)','Nancy\'s Masterpiece (Green)','Jump Rope (Green)','Blue Dress (Green)',
+			'Pill Bottle (Purple)','Paint Thinner (Purple)','Class Photo (Purple)','\"Z\" Block (Purple)',
+			'Red Paint Brush (Red)','Black Box (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -98,7 +143,12 @@ async def setKill(ctx):
 		
 
 	if(killer == 'Shape'):
-		addonList = ['Tacky Earrings','Boyfriend\'s Memo','Blond Hair','Reflective Fragment','Memorial Flower','Jewelry','Hair Brush','Glass Fragment','Dead Rabbit','Mirror Shard','Judith\'s Journal','Jewelry Box','J. Myers Memorial','Hair Bow','Vanity Mirror','Tombstone Piece','Scratched Mirror','Lock of Hair','Judith\'s Tombstone','Fragrant Tuft of Hair','Nothing','Nothing','Nothing']
+		addonList = ['Tacky Earrings (Brown)','Boyfriend\'s Memo (Brown)','Blond Hair (Brown)',
+			'Reflective Fragment (Yellow)','Memorial Flower (Yellow)','Jewelry (Yellow)','Hair Brush (Yellow)','Glass Fragment (Yellow)','Dead Rabbit (Yellow)',
+			'Mirror Shard (Green)','Judith\'s Journal (Green)','Jewelry Box (Green)','J. Myers Memorial (Green)','Hair Bow (Green)',
+			'Vanity Mirror (Purple)','Tombstone Piece (Purple)','Scratched Mirror (Purple)','Lock of Hair (Purple)',
+			'Judith\'s Tombstone (Red)','Fragrant Tuft of Hair (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -106,7 +156,12 @@ async def setKill(ctx):
 		
 
 	if(killer == 'Huntress'):
-		addonList = ['Coarse Stone','Berus Toxin','Bandaged Haft','Amanita Toxin','Yew Seed Brew','Shiny Pin','Oak Haft','Manna Grass Braid','Leather Loop','Fine Stone','Deerskin Gloves','Yew Seed Concoction','Venomous Concoction','Rusty Head','Pungent Fiale','Flower Babushka','Infantry Belt','Glowing Concoction','Begrimed Head','Iridescent Head','Nothing','Nothing','Nothing']
+		addonList = ['Coarse Stone (Brown)','Berus Toxin (Brown)','Bandaged Haft (Brown)','Amanita Toxin (Brown)',
+			'Yew Seed Brew (Yellow)','Shiny Pin (Yellow)','Oak Haft (Yellow)','Manna Grass Braid (Yellow)','Leather Loop (Yellow)','Fine Stone (Yellow)','Deerskin Gloves (Yellow)',
+			'Yew Seed Concoction (Green)','Venomous Concoction (Green)','Rusty Head (Green)','Pungent Fiale (Green)','Flower Babushka (Green)',
+			'Infantry Belt (Purple)','Glowing Concoction (Purple)','Begrimed Head (Purple)',
+			'Iridescent Head (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -114,7 +169,12 @@ async def setKill(ctx):
 		
 
 	if(killer == 'Pig'):
-		addonList = ['Workshop Grease','Shattered Syringe','John\'s Medical File','Combat Straps','Video Tape','Utility Blades','Razor Wires','Last Will','Face Mask','Slow-Release Toxin','Rusty Attachments','Jigsaw\'s Sketch','Interlocking Razor','Bag Of Gears','Tampered Timer','Jigsaw\'s Annotated Plan','Crate Of Gears','Amanda\'s Secret','Rules Set No.2','Amanda\'s Letter','Nothing','Nothing','Nothing']
+		addonList = ['Workshop Grease (Brown)','Shattered Syringe (Brown)','John\'s Medical File (Brown)','Combat Straps (Brown)',
+			'Video Tape (Yellow)','Utility Blades (Yellow)','Razor Wires (Yellow)','Last Will (Yellow)','Face Mask (Yellow)',
+			'Slow-Release Toxin (Green)','Rusty Attachments (Green)','Jigsaw\'s Sketch (Green)','Interlocking Razor (Green)','Bag Of Gears (Green)',
+			'Tampered Timer (Purple)','Jigsaw\'s Annotated Plan (Purple)','Crate Of Gears (Purple)','Amanda\'s Secret (Purple)',
+			'Rules Set No.2 (Red)','Amanda\'s Letter (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -122,7 +182,11 @@ async def setKill(ctx):
 		
 
 	if(killer == 'Nurse'):
-		addonList = ['Wooden Horse','White Nit Comb','Torn Bookmark','Metal Spoon','Matchbox','Bad Man Keepsake','Pocket Warch','Dull Bracelet','Dark Cincture','Catatonic Boy\'s Treasure','Spasmodic Breathe','Heavy Panting','Fragile Wheeze','Ataxic Respiration','Anxious Grasp','Plaid Flannel','Kavanagh\'s Last Breath','Jenner\'s Last Breath','Campbell\'s Last Breath','\"Bad Man\'s\" Last Breath','Nothing','Nothing','Nothing']
+		addonList = ['Wooden Horse (Brown)','White Nit Comb (Brown)','Torn Bookmark (Brown)','Metal Spoon (Brown)','Matchbox (Brown)','Bad Man Keepsake (Brown)',
+			'Pocket Warch (Yellow)','Dull Bracelet (Yellow)','Dark Cincture (Yellow)','Catatonic Boy\'s Treasure (Yellow)',
+			'Spasmodic Breathe (Green)','Heavy Panting (Green)','Fragile Wheeze (Green)','Ataxic Respiration (Green)','Anxious Grasp (Green)',
+			'Plaid Flannel (Purple)','Kavanagh\'s Last Breath (Purple)','Jenner\'s Last Breath (Purple)','Campbell\'s Last Breath (Purple)','\"Bad Man\'s\" Last Breath (Purple)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -130,7 +194,12 @@ async def setKill(ctx):
 		
 		
 	if(killer == 'Wraith'):
-		addonList = ['Bone Clapper','\"Swift Hunt\" - Soot','\"Blink\" - Soot','\"Blind Warrior\" - Soot','Coxcombed Clapper','\"Windstorm\" - Mud','\"Swift Hunt\" - Mud','\"Blind Warrior\" - Mud','\"All Seeing\" - Mud','\"Windstorm\" - White','\"The Ghost\" - White','\"Swift Hunt\" - White','\"All Seeing\" - White','\"Windstorm\" - Blood','\"Blink\" - Blood','\"Blind Warrior\" - Blood','\"All Seeing\" - Blood','\"Blind Warrior\" - Spirit','\"All Seeing\" - Spirit','Nothing','Nothing','Nothing']
+		addonList = ['\"The Serpent\" - Soot (Brown)','\"The Hound\" - Soot (Brown)','\"The Ghost\" - Soot (Brown)','\"The Beast\" - Soot (Brown)',
+			'Bone Clapper (Yellow)','\"Blink\" - Mud (Yellow)','\"Windstorm\" - Mud (Yellow)','\"Swift Hunt\" - Mud (Yellow)','\"Blind Warrior\" - Mud (Yellow)',
+			'\"Windstorm\" - White (Green)','\"Swift Hunt\" - White (Green)','\"Shadow Dance\" - White (Green)','\"Blink\" - White (Green)','\"Blind Warrior\" - White (Green)',
+			'\"Windstorm\" - Blood (Purple)','\"Swift Hunt\" - Blood (Purple)','\"Shadow Dance\" - Blood (Purple)','\"All Seeing\" - Blood (Purple)',
+			'Coxcombed Clapper (Red)','\"All Seeing\" - Spirit (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -138,7 +207,12 @@ async def setKill(ctx):
 		
 		
 	if(killer == 'Clown'):
-		addonList = ['Smelly Inner Soles','Robin Feather','Fingerless Parade Gloves','Ether 5 Vol%','Thick Cork Stopper','Sticky Soda Bottle','Starling Feather','Solvent Jug','Kerosene Can','VHS Porn','Sulphuric Acid Vial','Flask Of Bleach','Ether 10 Vol%','Bottle Of Chloroform','Garish Make-up Kit','Ether 15 Vol%','Cigar Box','Cheap Gin Bottle','Tattoo\'s Middle Finger','Redhead\'s Pinky Finger','Nothing','Nothing','Nothing']
+		addonList = ['Smelly Inner Soles (Brown)','Robin Feather (Brown)','Fingerless Parade Gloves (Brown)','Ether 5 Vol% (Brown)',
+			'Thick Cork Stopper (Yellow)','Sticky Soda Bottle (Yellow)','Starling Feather (Yellow)','Solvent Jug (Yellow)','Kerosene Can (Yellow)'
+			,'VHS Porn (Green)','Sulphuric Acid Vial (Green)','Flask Of Bleach (Green)','Ether 10 Vol% (Green)','Bottle Of Chloroform (Green)',
+			'Garish Make-up Kit (Purple)','Ether 15 Vol% (Purple)','Cigar Box (Purple)','Cheap Gin Bottle (Purple)',
+			'Tattoo\'s Middle Finger (Red)','Redhead\'s Pinky Finger (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -146,7 +220,12 @@ async def setKill(ctx):
 		
 		
 	if(killer == 'Spirit'):
-		addonList = ['Zori','Shiawase Amulet','Origami Crane','Gifted Bamboo Comb','White Hair Ribbon','Rin\'s Broken Watch','Muddy Sports Day Cap','Kaiun Talisman','Juniper Bonsai','Rusty Flute','Katsumori Talisman','Katana Tsuba','Dirty Uwabaki','Bloody Hair Brooch','Yakuyoke Amulet','Wakizashi Saya','Prayer Beads Bracelet','Dried Cherry Blossom','Mother-Daughter Ring','Father\'s Glasses','Nothing','Nothing','Nothing']
+		addonList = ['Zori (Brown)','Shiawase Amulet (Brown)','Origami Crane (Brown)','Gifted Bamboo Comb (Brown)',
+		'White Hair Ribbon (Yellow)','Rin\'s Broken Watch (Yellow)','Muddy Sports Day Cap (Yellow)','Kaiun Talisman (Yellow)','Juniper Bonsai (Yellow)',
+		'Rusty Flute (Green)','Katsumori Talisman (Green)','Katana Tsuba (Green)','Dirty Uwabaki (Green)','Bloody Hair Brooch (Green)',
+		'Yakuyoke Amulet (Purple)','Wakizashi Saya (Purple)','Prayer Beads Bracelet (Purple)','Dried Cherry Blossom (Purple)',
+		'Mother-Daughter Ring (Red)','Father\'s Glasses (Red)',
+		'Nothing','Nothing','Nothing']
 		addon1 = random.choice(addonList)
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
@@ -154,39 +233,63 @@ async def setKill(ctx):
 		
 
 	if(dm == False):
-		await client.say('Killer: ' + killer + '\n' +
+		await client.say('```Killer: ' + killer + '\n' +
+			'----------------------------------------' + '\n' +
 			'Item addon 1: ' + addon1 + '\n' + 
 			'Item addon 2: ' + addon2 + '\n' + 
+			'----------------------------------------' + '\n' +
 			'Offering: ' + offering + '\n' + 
+			'----------------------------------------' + '\n' +
 			'Perk 1: ' + perk1 + '\n' + 
 			'Perk 2: ' + perk2 + '\n' + 
 			'Perk 3: ' + perk3 + '\n' + 
-			'Perk 4: ' + perk4);
+			'Perk 4: ' + perk4 + '\n```');
 	else:		
-		await client.send_message(ctx.message.author,'Killer: ' + killer + '\n' +
+		await client.send_message(ctx.message.author,'```Killer: ' + killer + '\n' +
+			'----------------------------------------' + '\n' +
 			'Item addon 1: ' + addon1 + '\n' + 
 			'Item addon 2: ' + addon2 + '\n' + 
+			'----------------------------------------' + '\n' +
 			'Offering: ' + offering + '\n' + 
+			'----------------------------------------' + '\n' +
 			'Perk 1: ' + perk1 + '\n' + 
 			'Perk 2: ' + perk2 + '\n' + 
 			'Perk 3: ' + perk3 + '\n' + 
-			'Perk 4: ' + perk4);
+			'Perk 4: ' + perk4 + '```');
 
-			
-			
-			
+
+
 @client.command(pass_context = True)	
-async def setSur(*args):
+async def setSur(ctx):
 	#Set value to false for in channel responses
 	dm = True
 	
-	survChoices = ['Dwight Fairfield','Meg Thomas','Claudette Morel','Jake Park','William \"Bill\" Overbeck','Laurie Strode','Ace Viscondi','Nea Karlsson','Feng Min','David King','Quentin Smith','Detective \"David\" Tapp','Kate Denson','Adam Francis']
+	survChoices = ['Dwight Fairfield','Meg Thomas','Claudette Morel','Jake Park','William \"Bill\" Overbeck','Laurie Strode','Ace Visconti','Nea Karlsson','Feng Min','David King','Quentin Smith','Detective \"David\" Tapp','Kate Denson','Adam Francis']
 	survivor = random.choice(survChoices)
 	
-	offerChoices = ['Petrified Oak','Clear Reagent','Faint Reagent','Hazy Reagent','New Moon Bouquet','Crescent Moon Bouquet','Shroud of Union','Vigo\'s Shroud','Shroud of Binding','Quarter Moon Bouquet','Chalk Pouch','Cream Chalk Pouch','Ivory Chalk Pouch','Salt Pouch','Black Salt Statuette','Tarnished Coin','Shiny Coin','Murky Reagent','Full Moon Bouquet','Vigo\'s Jar of Salty Lips','Nothing','Nothing']
+	offerChoices = ['Clear Reagent (Brown)','Faint Reagent (Brown)','Chalk Pouch (Brown)',
+		'Hazy Reagent (Yellow)','Shroud of Union (Yellow)','Vigo\'s Shroud (Yellow)','Cream Chalk Pouch (Yellow)','Salt Pouch (Yellow)','Tarnished Coin (Yellow)',
+		'Ivory Chalk Pouch (Green)','Black Salt Statuette (Green)',
+		'Shroud of Binding (Purple)','Petrified Oak (Purple)','Shiny Coin (Purple)','Murky Reagent (Purple)','Vigo\'s Jar of Salty Lips (Purple)',
+		'Nothing','Nothing']
 	offering = random.choice(offerChoices)
-
-	perkChoices = ['Adrenaline','Balanced Landing','Bond','Botany Knowledge','Dark Sense','Decisive Strike','Deja Vu','Empathy','Left Behind','Lightweight','No One Left Behind','Object of Obsession','Plunderer\'s Instinct','Premonition','Prove Thyself','Resilience','Unbreakable','Self-Care','Slippery Meat','Small Game','Sole Survivor','Sprint Burst','Borrowed Time','This is not Happening','Stake Out','We\'ll Make It','Iron Will','Open Handed','Up The Ante','Leader','Calm Spirit','Hope','Spine Chill','Ace In The Hole','Kindred','Detective\'s Hunch','Quick And Quiet','Technician','Alert','Lithe','Saboteur','We\'re Gonna Live Forever','Dead Hard','No Mither','Pharmacy','Vigil','Wake Up!','Tenacity','Streetwise','Urban Evasion','Dance With Me','Windows Of Opportunity','Boil Over','Diversion','Deliverance','Autodidact','Nothing','Nothing','Nothing','Nothing','Nothing']
+	
+	perkChoices = ['Bond (Green)','Prove Thyself (Purple)','Leader (Purple)', #Dwight
+		'Quick & Quiet (Green)','Sprint Burst (Purple)','Adrenaline (Purple)', #Meg
+		'Empathy (Green)','Botany Knowledge (Purple)','Self Care (Purple)', #Claudette
+		'Iron Will (Green)','Calm Spirit (Purple)','Saboteur (Purple)', #Jake
+		'Balanced Landing (Green)','Urban Evasion (Purple)','Streetwise (Purple)', #Nea
+		'Left Behind (Green)','Borrowed Time (Purple)','Unbreakable (Purple)', #Bill
+		'We\'re Gonna Live Forever (Green)','Dead Hard (Purple)','No Mither (Purple)', #David King
+		'Sole Survivor','Object Of Obsession (Purple)','Decisive Strike (Purple)', #Laurie
+		'Open-Handed','Up The Ante (Purple)','Ace In The Hole (Purple)', #Ace
+		'Technician (Green)','Lithe (Purple)','Alert (Purple)', #Feng
+		'Wake Up! (Green)','Pharmacy (Purple)','Vigil (Purple)', #Quentin
+		'Tenacity (Green)','Detective\'s Hunch (Purple)','Stake Out (Purple)', #David Tapp
+		'Dance With Me (Purple)','Windows Of Opportunity (Green)','Boil Over (Purple)', #Kate
+		'Diversion (Green)','Deliverance (Purple)','Autodidact (Purple)', #Adam
+		'Dark Sense (Purple)','Deja Vu (Purple)','Hope (Purple)','Kindred (Purple)','Lightweight (Green)','No One Left Behind (Purple)','Plunderer\'s Instinct (Green)','Premonition (Purple)','Resilience (Purple)','Slippery Meat (Green)','Small Game (Green)','Spine Chill (Purple)','This Is Not Happening (Purple)','We\'ll Make It (Purple)']
+	
 
 	perk1 = random.choice(perkChoices)
 	
@@ -202,65 +305,122 @@ async def setSur(*args):
 	while(perk4 == perk3 and perk4 != 'Nothing' or perk4 == perk2 and perk4 != 'Nothing' or perk4 == perk1 and perk4 != 'Nothing' ):
 		perk4 = random.choice(perkChoices)
 
-	itemChoices = ['Chinese Firecrackers','Camping Aid Kit','Worn-Out Tools','No Item','First Aid Kit','Toolbox','Sport Flashlight','Emergency Med-Kit','No Item','Commodious Toolbox','Broken Key','Map','Utility Flashlight','Ranger Med-Kit','No Item','Alex\'s Toolbox','Dull Key','Rainbow Map','No Item','Flashlight','Mechanic\'s Toolbox','Engineer\'s Toolbox','Skeleton Key','Will O\' Wisp','All Hallows\' Eve Lunchbox','Winter Party Starter','No Item']
+	itemChoices = ['Camping Aid Kit (Brown)','Worn-Out Tools (Brown)',
+		'First Aid Kit (Yellow)','Toolbox (Yellow)','Flashlight (Yellow)',
+		'Emergency Med-Kit (Green)','Commodious Toolbox (Green)','Mechanic\'s Toolbox (Green)','Sport Flashlight (Green)','Broken Key (Green)','Map (Green)',
+		'Ranger Med-Kit (Purple)','Alex\'s Toolbox (Purple)','Engineer\'s Toolbox (Purple)','Utility Flashlight (Purple)','Dull Key (Purple)',
+		'Skeleton Key (Red)','Rainbow Map (Red)',
+		'All Hallows\' Eve Lunchbox (Event)','Chinese Firecrackers (Event)','Winter Party Starter (Event)','Will O\' Wisp (Event)',
+		'No Item','No Item','No Item','No Item']
 
 	item = random.choice(itemChoices)
 
-	if(item == 'Sport Flashlight' or item == 'Utility Flashlight' or item == 'Flashlight'):
-		torchAddon = ['Wide Lens','Power Bulb','Leather Grip','Battery','Tir Optic','Rubber Grip','Low Amp Filament','Heavy Duty Battery','Focus Lens','Long Life Battery','Intense Halogen','High-End Sapphire Lens','Odd Bulb','Nothing','Nothing','Nothing']
+	if(item == 'Flashlight (Yellow)' or item =='Sport Flashlight (Green)' or item == 'Utility Flashlight (Purple)' or item ==  'Will O\' Wisp (Event)'):
+		torchAddon = ['Wide Lens (Brown)','Power Bulb (Brown)','Leather Grip (Brown)','Battery (Brown)',
+			'Tir Optic (Yellow)','Rubber Grip (Yellow)','Low Amp Filament (Yellow)','Heavy Duty Battery (Yellow)','Focus Lens (Yellow)',
+			'Long Life Battery (Green)','Intense Halogen (Green)',
+			'High-End Sapphire Lens (Purple)',
+			'Odd Bulb (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(torchAddon)
 		addon2 = random.choice(torchAddon)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
 			addon2 = random.choice(torchAddon)
 
-	if(item == 'Camping Aid Kit' or item == 'First Aid Kit' or item == 'Emergency Med-Kit' or item == 'Ranger Med-Kit'):
-		medAddon = ['Rubber Gloves','Butterfly Tape','Bandages','Sponge','Self Adgerent Wrap','Needle and Thread','Medical Scissors','Gauze Roll','Surgical Suture','Gel Dressings','Abdominal Dressing','Styptic Agent','Anti-Hemorrhagic Syringe','Nothing','Nothing','Nothing']
+	if(item == 'Camping Aid Kit (Brown)' or item == 'First Aid Kit (Yellow)' or item == 'Emergency Med-Kit (Green)' or item == 'Ranger Med-Kit (Purple)' or item == 'All Hallows\' Eve Lunchbox (Event)'):
+		medAddon = ['Rubber Gloves (Brown)','Butterfly Tape (Brown)','Bandages (Brown)',
+			'Sponge (Yellow)','Self Adgerent Wrap (Yellow)','Needle and Thread (Yellow)','Medical Scissors (Yellow)','Gauze Roll (Yellow)',
+			'Surgical Suture (Green)','Gel Dressings (Green)','Abdominal Dressing (Green)',
+			'Styptic Agent (Purple)',
+			'Anti-Hemorrhagic Syringe (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(medAddon)
 		addon2 = random.choice(medAddon)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
 			addon2 = random.choice(medAddon)
 		
-	if(item == 'Worn-Out Tools' or item == 'Toolbox' or item == 'Commodious Toolbox' or item == 'Alex\'s Toolbox' or item == 'Mechanic\'s Toolbox' or item == 'Engineer\'s Toolbox'):
-		toolAddon = ['Spring Clamp','Scraps','Clean Rag','Wire Spool','Socket Swivels','Protective Gloves','Instructions','Grip Wrench','Cutting Wire','Hacksaw','Brand New Part','Nothing','Nothing']
+	if(item == 'Worn-Out Tools (Brown)' or item == 'Toolbox (Yellow)' or item == 'Commodious Toolbox (Green)' or item == 'Mechanic\'s Toolbox (Green)' or item == 'Alex\'s Toolbox (Purple)' or item == 'Engineer\'s Toolbox (Purple)'):
+		toolAddon = ['Spring Clamp (Brown)','Scraps (Brown)','Clean Rag (Brown)',
+			'Wire Spool (Yellow)','Socket Swivels (Yellow)','Protective Gloves (Yellow)','Instructions (Yellow)', 'Grip	Wrench (Yellow)','Cutting Wire (Yellow)',
+			'Hacksaw (Green)','Brand New Part (Red)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(toolAddon)
 		addon2 = random.choice(toolAddon)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
 			addon2 = random.choice(toolAddon)
 		
-	if(item == 'Broken Key' or item == 'Skeleton Key' or item == 'Dull Key'):
-		keyAddon = ['Prayer Rope','Scratched Pearl','Prayer Beads','Eroded Token','Gold Token','Weaved Ring','Milky Glass','Blood Amber','Nothing','Nothing']
+	if(item == 'Broken Key (Green)' or item == 'Dull Key (Purple)' or item == 'Skeleton Key (Red)'):
+		keyAddon = ['Prayer Rope (Brown)',
+			'Scratched Pearl (Yellow)','Prayer Beads (Yellow)','Eroded Token (Yellow)',
+			'Gold Token (Green)',
+			'Weaved Ring (Purple)','Milky Glass (Purple)','Blood Amber (Purple)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(keyAddon)
 		addon2 = random.choice(keyAddon)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
 			addon2 = random.choice(keyAddon)
 		
-	if(item == 'Map' or item == 'Rainbow Map'):
-		mapAddon = ['Mapp Addendum','Yellow Wire','Unusual Stamp','Retardant Jelly','Red Twine','Glass Bead','Odd Stamp','Black Silk Cord','Crystal Bead','Nothing','Nothing']
+	if(item == 'Map (Green)' or item == 'Rainbow Map (Red)'):
+		mapAddon = ['Map Addendum (Brown)',
+			'Yellow Wire (Yellow)','Unusual Stamp (Yellow)','Retardant Jelly (Yellow)','Red Twine (Yellow)','Glass Bead (Yellow)',
+			'Odd Stamp (Green)','Black Silk Cord (Green)','Crystal Bead (Purple)',
+			'Nothing','Nothing','Nothing']
 		addon1 = random.choice(mapAddon)
 		addon2 = random.choice(mapAddon)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
 			addon2 = random.choice(mapAddon)
 			
-	if(dm == False):	
-		await client.say('Survivor: ' + survivor + '\n' +
-			'Item: ' + item + '\n' +
-			'Item addon 1: ' + addon1 + '\n' + 
-			'Item addon 2: ' + addon2 + '\n' + 
-			'Offering: ' + offering + '\n' + 
-			'Perk 1: ' + perk1 + '\n' + 
-			'Perk 2: ' + perk2 + '\n' + 
-			'Perk 3: ' + perk3 + '\n' + 
-			'Perk 4: ' + perk4);
-	else:		
-		await client.send_message(ctx.message.author,'Survivor: ' + survivor + '\n' +
-			'Item: ' + item + '\n' +
-			'Item addon 1: ' + addon1 + '\n' + 
-			'Item addon 2: ' + addon2 + '\n' + 
-			'Offering: ' + offering + '\n' + 
-			'Perk 1: ' + perk1 + '\n' + 
-			'Perk 2: ' + perk2 + '\n' + 
-			'Perk 3: ' + perk3 + '\n' + 
-			'Perk 4: ' + perk4);
+		
+	if(dm == False):
+		if(item == 'No Item'):
+			await client.say('```Survivor: ' + survivor + '\n' +
+				'----------------------------------------' + '\n' +
+				'Item: ' + item + '\n' +
+				'----------------------------------------' + '\n' +
+				'Offering: ' + offering + '\n' + 
+				'----------------------------------------' + '\n' +
+				'Perk 1: ' + perk1 + '\n' + 
+				'Perk 2: ' + perk2 + '\n' + 
+				'Perk 3: ' + perk3 + '\n' + 
+				'Perk 4: ' + perk4 + '```');
+		else:
+			await client.say('```Survivor: ' + survivor + '\n' +
+				'----------------------------------------' + '\n' +
+				'Item: ' + item + '\n' +
+				'Item addon 1: ' + addon1 + '\n' + 
+				'Item addon 2: ' + addon2 + '\n' + 
+				'----------------------------------------' + '\n' +
+				'Offering: ' + offering + '\n' + 
+				'----------------------------------------' + '\n' +
+				'Perk 1: ' + perk1 + '\n' + 
+				'Perk 2: ' + perk2 + '\n' + 
+				'Perk 3: ' + perk3 + '\n' + 
+				'Perk 4: ' + perk4 + '```');
+	else:
+		if(item == 'No Item'):
+			await client.send_message(ctx.message.author,'```Survivor: ' + survivor + '\n' +
+				'----------------------------------------' + '\n' +
+				'Item: ' + item + '\n' +
+				'----------------------------------------' + '\n' +
+				'Offering: ' + offering + '\n' + 
+				'----------------------------------------' + '\n' +
+				'Perk 1: ' + perk1 + '\n' + 
+				'Perk 2: ' + perk2 + '\n' + 
+				'Perk 3: ' + perk3 + '\n' + 
+				'Perk 4: ' + perk4 + '```');
+		else:
+			await client.send_message(ctx.message.author,'```Survivor: ' + survivor + '\n' +
+				'----------------------------------------' + '\n' +
+				'Item: ' + item + '\n' +
+				'Item addon 1: ' + addon1 + '\n' + 
+				'Item addon 2: ' + addon2 + '\n' + 
+				'----------------------------------------' + '\n' +
+				'Offering: ' + offering + '\n' + 
+				'----------------------------------------' + '\n' +
+				'Perk 1: ' + perk1 + '\n' + 
+				'Perk 2: ' + perk2 + '\n' + 
+				'Perk 3: ' + perk3 + '\n' + 
+				'Perk 4: ' + perk4 + '```');
 	
 	
 client.run('NDE3NTYwODc2ODUwMzQ4MDMz.DXU61A.XGCyZ9rDNN3-otSTjuL6b8Ts1NA')
