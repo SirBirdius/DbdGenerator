@@ -1,2 +1,7 @@
 28/08/2018: Added Clown DLC Survivor/Killer and perks to lists
 07/10/2018: Added Spirit DLC Survivor/Killer and perks to lists
+17/11/2018: Error with Spirit fixed, can now be selected in random loadout
+	Faster response for loadout - Now loadout is randomly built then sent as a single message
+	Lowered chance for no perks on killers (13% down to 9%)
+	Lowered chance for no perks on survivors (15% down to 9%)
+	Enabled DM responses - All commands will be sent to author directly
