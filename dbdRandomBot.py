@@ -8,6 +8,7 @@ import random
 
 # Here you can modify the bot's prefix and description and wether it sends help in direct messages or not.
 client = Bot(description="Basic Bot prototype", command_prefix="/", pm_help = True)
+dm = True
 
 # This is what happens everytime the bot launches. In this case, it prints information like server count, user count the bot is connected to, and the bot id in the console.
 # Do not mess with it because the bot can break, if you wish to do so, please consult me or someone trusted.
@@ -26,9 +27,9 @@ async def on_ready():
 @client.command(pass_context = True)
 async def setKill(ctx):
 	#Set value to false for in channel responses
-	dm = True
+	global dm
 	
-	killChoices = ['Trapper','Wraith','Hillbilly','Nurse','Shape','Doctor','Huntress','Cannibal','Nightmare','Pig','Hag','Clown','Spirit']
+	killChoices = ['Trapper','Wraith','Hillbilly','Nurse','Shape','Doctor','Huntress','Cannibal','Nightmare','Pig','Hag','Clown','Spirit','Legion']
 	killer = random.choice(killChoices)	
 	
 	offerChoices = ['Clear Reagent (Brown)',
@@ -52,6 +53,7 @@ async def setKill(ctx):
 		'Hangman\'s Trick (Green)','Surveillance (Purple)','Make Your Choice (Purple)', #Pig
 		'Bamboozle (Green)','Coulrophobia (Purple)','Pop Goes The Weasel (Purple)', #Clown
 		'Spirit Fury (Green)','Hex: Haunted Ground (Purple)','Rancor (Purple)', #Spirit
+		'Discordance (Green)','Mad Grit (Purple)','Iron Maiden (Purple)', #Legion
 		'Bitter Murmer (Purple)','Deerstalker (Green)','Distressing (Green)','Insidious (Purple)','Iron Grasp (Green)','Hex: No One Escapes Death (Purple)','Hex: Thrill Of The Hunt (Green)','Monstrous Shrine (Green)','Sloppy Butcher (Green)','Spies From The Shadows (Green)','Unrelenting (Green)','Whispers (Purple)']
 
 	perk1 = random.choice(perkChoices)
@@ -230,6 +232,19 @@ async def setKill(ctx):
 		addon2 = random.choice(addonList)
 		while (addon2 == addon1 and addon2 != 'Nothing'):
 			addon2 = random.choice(addonList)
+			
+			
+	if(killer == 'Legion'):
+		addonList = ['Smiley Face Pin (Brown)','Scratched Ruler (Brown)','Mischief List (Brown)','Friendship Bracelet (Brown)',
+		'Never-Sleep Pills (Yellow)','Mural Sketch (Yellow)','Julie\'s Mix Tape (Yellow)','Etched Ruler (Yellow)','Defaced Smiley Pin (Yellow)',
+		'The Legion Pin (Green)','Susie\'s Mix Tape (Green)','Stolen Sketch Book (Green)','Nasty Blade (Green)','Joey\'s Mix Tape (Green)',
+		'Stab Wounds Study (Purple)','Frank\'s Mix Tape (Purple)','Filthy Blade (Purple)','Cold Dirt (Purple)',
+		'Iridescent Button (Red)','Fuming Mix Tape (Red)',
+		'Nothing','Nothing','Nothing']
+		addon1 = random.choice(addonList)
+		addon2 = random.choice(addonList)
+		while (addon2 == addon1 and addon2 != 'Nothing'):
+			addon2 = random.choice(addonList)
 		
 
 	if(dm == False):
@@ -262,9 +277,9 @@ async def setKill(ctx):
 @client.command(pass_context = True)	
 async def setSur(ctx):
 	#Set value to false for in channel responses
-	dm = True
+	global dm
 	
-	survChoices = ['Dwight Fairfield','Meg Thomas','Claudette Morel','Jake Park','William \"Bill\" Overbeck','Laurie Strode','Ace Visconti','Nea Karlsson','Feng Min','David King','Quentin Smith','Detective \"David\" Tapp','Kate Denson','Adam Francis']
+	survChoices = ['Dwight Fairfield','Meg Thomas','Claudette Morel','Jake Park','William \"Bill\" Overbeck','Laurie Strode','Ace Visconti','Nea Karlsson','Feng Min','David King','Quentin Smith','Detective \"David\" Tapp','Kate Denson','Adam Francis','Jeffrey \"Jeff\" Johansen']
 	survivor = random.choice(survChoices)
 	
 	offerChoices = ['Clear Reagent (Brown)','Faint Reagent (Brown)','Chalk Pouch (Brown)',
@@ -288,6 +303,7 @@ async def setSur(ctx):
 		'Tenacity (Green)','Detective\'s Hunch (Purple)','Stake Out (Purple)', #David Tapp
 		'Dance With Me (Purple)','Windows Of Opportunity (Green)','Boil Over (Purple)', #Kate
 		'Diversion (Green)','Deliverance (Purple)','Autodidact (Purple)', #Adam
+		'Breakdown (Green)''Aftercare (Purple)','Distortion (Purple)', #Jeffrey
 		'Dark Sense (Purple)','Deja Vu (Purple)','Hope (Purple)','Kindred (Purple)','Lightweight (Green)','No One Left Behind (Purple)','Plunderer\'s Instinct (Green)','Premonition (Purple)','Resilience (Purple)','Slippery Meat (Green)','Small Game (Green)','Spine Chill (Purple)','This Is Not Happening (Purple)','We\'ll Make It (Purple)']
 	
 
@@ -422,6 +438,17 @@ async def setSur(ctx):
 				'Perk 3: ' + perk3 + '\n' + 
 				'Perk 4: ' + perk4 + '```');
 	
+	
+	
+@client.command()
+async def dmToggle(*args):
+	global dm
+	if(dm == False):
+		dm = True
+		await client.say('Direct Message responses enabled')
+	else:
+		dm = False
+		await client.say('Direct Message responses disabled')
 	
 client.run('NDE3NTYwODc2ODUwMzQ4MDMz.DXU61A.XGCyZ9rDNN3-otSTjuL6b8Ts1NA')
 
