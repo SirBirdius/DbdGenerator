@@ -7,3 +7,4 @@
 	Enabled DM responses - All commands will be sent to author directly
 	Neater output
 	Lists are in a more readable order in the source
+12/12/2018: Added Chapter X DLC content - Legion killer and Jeff survivor
